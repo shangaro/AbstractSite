@@ -28,7 +28,7 @@
 
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group col-md-4 col-sm-6">
                 <label for="">@Model.FrequencyElem.Model.Frequency</label>
                 @Html.DropDownList("frequency",new SelectList(Model.FrequencyElem.HtmlAttributes.Select(x=>new
                 SelectListItem(){Value=x.Value,Text=x.Text}), "Value", "Text"), new { @class="form-control" })

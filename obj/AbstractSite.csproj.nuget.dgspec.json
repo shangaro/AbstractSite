@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\Dibas\\AbstractSite\\AbstractSite.csproj": {}
+    "C:\\Dev\\test\\AbstractSite\\AbstractSite.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\Dibas\\AbstractSite\\AbstractSite.csproj": {
+    "C:\\Dev\\test\\AbstractSite\\AbstractSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Dibas\\AbstractSite\\AbstractSite.csproj",
+        "projectUniqueName": "C:\\Dev\\test\\AbstractSite\\AbstractSite.csproj",
         "projectName": "AbstractSite",
-        "projectPath": "D:\\Dev\\Dibas\\AbstractSite\\AbstractSite.csproj",
-        "packagesPath": "C:\\Users\\Dibas Baral\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Dibas\\AbstractSite\\obj\\",
+        "projectPath": "C:\\Dev\\test\\AbstractSite\\AbstractSite.csproj",
+        "packagesPath": "C:\\Users\\dbaral\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\test\\AbstractSite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dibas Baral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dbaral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

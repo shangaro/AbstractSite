@@ -25,4 +25,37 @@ namespace AbstractSite.ViewModels
             return _modelWrapper;
         }
     }
+
+    public class NewReviewNotification : ReviewNotification
+    {
+        public NewReviewNotification() : base(NotificationState.NEW)
+        {
+            
+        }
+        public override void Name()
+        {
+            _modelWrapper.NameElement.Model.Name = "New Review Name";
+            
+        }
+    }
+    public class EditReviewNotification : ReviewNotification
+    {
+        public EditReviewNotification() : base(NotificationState.EDIT)
+        {
+        }
+        public override void Name()
+        {
+            _modelWrapper.NameElement.Model.Name = "Edit Review Name";
+        }
+    }
+    public class ViewReviewNotification : ReviewNotification
+    {
+        public ViewReviewNotification() : base(NotificationState.VIEW)
+        {
+        }
+        public override void Name()
+        {
+            _modelWrapper.NameElement.Model.Name = "View Review Name";
+        }
+    }
 }

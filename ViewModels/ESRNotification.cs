@@ -4,19 +4,8 @@ namespace AbstractSite.ViewModels
 {
     public class ESRNotification : BaseNotification<ESRViewModel>
     {
-
         public ESRNotification(NotificationState state) : base(state)
         {
-        }
-
-        public override void Description()
-        {
-            base.Description();
-        }
-
-        public override void Email()
-        {
-            base.Email();
         }
 
         public override ESRViewModel Finalize()
@@ -25,10 +14,6 @@ namespace AbstractSite.ViewModels
             return _modelWrapper;
         }
 
-        public override void Name()
-        {
-            base.Name();
-        }
 
         public void Sources()
         {
@@ -37,4 +22,34 @@ namespace AbstractSite.ViewModels
         }
 
     }
+    public class NewESRNotification : ESRNotification
+    {
+        public NewESRNotification() : base(NotificationState.NEW)
+        {
+        }
+        public override void Name()
+        {
+            _modelWrapper.NameElement.Model.Name = "new ESR Name";
+        }
+    }
+    public class EditESRNotification : ESRNotification
+    {
+        public EditESRNotification() : base(NotificationState.EDIT)
+        {
+        }
+        public override void Name()
+        {
+            _modelWrapper.NameElement.Model.Name = "Edit ESR Name";
+        }
+    }
+    public class ViewESRNotification : ESRNotification
+    {
+        public ViewESRNotification() : base(NotificationState.VIEW)
+        {
+        }
+        public override void Name()
+        {
+            _modelWrapper.NameElement.Model.Name = "View ESR Name";
+        }
+    }   
 }

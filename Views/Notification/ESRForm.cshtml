@@ -1,0 +1,73 @@
+@using AbstractSite.ViewModels;
+@model ESRViewModel
+
+<div class="form-horizontal">
+    <form asp-action="Index" asp-controller="Notification" method="post">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">@Model.NameElement.Model.Name</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" name="email"
+                    value="@Model.NameElement.HtmlAttribute.Value" @Model.NameElement.HtmlAttribute.Disabled>
+            </div>
+            <div class="form-group">
+                <label for="" class="control-label col-sm-2">@Model.DescriptionElem.Model.Description</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="description" id="" aria-describedby="helpId"
+                        value="@Model.DescriptionElem.HtmlAttribute.Value"
+                        @Model.DescriptionElem.HtmlAttribute.Disabled>
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="">@Model.EmailElem.Model.Email</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="email" id="" aria-describedby="helpId"
+                        value="@Model.EmailElem.HtmlAttribute.Value" @Model.EmailElem.HtmlAttribute.Disabled>
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <ul class="checkbox-list " id="sourceList" data-disabled="">
+                <li class="select-all-li">
+                    <div class="custom-control custom-control-sm custom-checkbox">
+                        <input type="checkbox" class="custom-control-input select-all-input" id="sourceAll" data-parsley-multiple="sourceAll">
+                        <label class="custom-control-label" for="sourceAll">All</label>
+                    </div>
+                </li>
+                    <li>
+                        <div class="custom-control custom-control-sm custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" data-ischecked="false" value="Facebook" id="Facebook" name="source" data-parsley-required="" data-parsley-mincheck="1" data-parsley-trigger-after-failure="change" data-parsley-multiple="source">
+                            <label class="custom-control-label" for="Facebook">Facebook</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="custom-control custom-control-sm custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" data-ischecked="false" value="Foursquare" id="Foursquare" name="source" data-parsley-required="" data-parsley-mincheck="1" data-parsley-trigger-after-failure="change" data-parsley-multiple="source">
+                            <label class="custom-control-label" for="Foursquare">Foursquare</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="custom-control custom-control-sm custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" data-ischecked="false" value="Google" id="Google" name="source" data-parsley-required="" data-parsley-mincheck="1" data-parsley-trigger-after-failure="change" data-parsley-multiple="source">
+                            <label class="custom-control-label" for="Google">Google</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="custom-control custom-control-sm custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" data-ischecked="false" value="Yellowpages" id="Yellowpages" name="source" data-parsley-required="" data-parsley-mincheck="1" data-parsley-trigger-after-failure="change" data-parsley-multiple="source">
+                            <label class="custom-control-label" for="Yellowpages">Yellowpages</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="custom-control custom-control-sm custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" data-ischecked="false" value="Yelp" id="Yelp" name="source" data-parsley-required="" data-parsley-mincheck="1" data-parsley-trigger-after-failure="change" data-parsley-multiple="source">
+                            <label class="custom-control-label" for="Yelp">Yelp</label>
+                        </div>
+                    </li>
+            </ul>
+            </div>
+            
+    </form>
+</div>

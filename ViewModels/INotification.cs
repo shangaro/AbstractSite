@@ -1,11 +1,11 @@
 namespace AbstractSite.ViewModels
 {
-    public interface INotification<TModel> where TModel : BaseViewModel,new ()
+ 
+    public interface INotification<out TModel> where TModel : BaseViewModel,new ()
+ 
     {
-        void Description();
-        void Email();
-        void Name();
-        
+        TModel Finalize();
+
     }
     
 }

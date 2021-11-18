@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AbstractSite.ViewModels;
+using AbstractSite.Factories;
 
 namespace AbstractSite.Controllers
 {
@@ -15,8 +16,15 @@ namespace AbstractSite.Controllers
         }
         public IActionResult Index()
         {
-            var modelEngine = new ReviewNotification(Enums.NotificationState.NEW);
-            var model = modelEngine.Finalize();
+            INotification<BaseViewModel> notification = NotificationFactory.Create(Enums.NotificationState.VIEW,Enums.NotificationType.REVIEW);
+            var model = notification.Finalize();
+            return View(model);
+        }
+        [HttpGet("esr")]
+        public IActionResult ESRForm()
+        {
+            INotification<BaseViewModel> notification = NotificationFactory.Create(Enums.NotificationState.VIEW, Enums.NotificationType.ESR);
+            var model = notification.Finalize();
             return View(model);
         }
 
